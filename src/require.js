@@ -28,12 +28,13 @@ var stringRtrim = function(str) {
 }
 
 /**
+ * /a/b///c///d => a/b/c/d
  * @param {String} path
  * @return {String}
  */
 var cleanPath = function(path) {
   if (!path) path = '';
-  return path.replace(/(\/){2,10}/g, '');
+  return path.replace(/(\/){2,10}/g, '/');
 };
 
 /**
